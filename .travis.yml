@@ -8,3 +8,5 @@ deploy:
   role: "arn:aws:iam::167856709162:role/lambda-kinesis-execution-role"
   runtime: "Python 3.6"
   handler_name: "cicd"
+  access_key_id: $AWS_ACCESS_KEY_ID
+  secret_access_key: $AWS_SECRET_ACCESS_KEY
