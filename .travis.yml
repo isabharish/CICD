@@ -3,7 +3,7 @@ script:
   - python -m pytest -v
 deploy:
   provider: lambda
-  function_name: "lambda-ci/cd/test"
+  function_name: "lambda-cicd"
   region: "ap-southeast-2"
   role: "arn:aws:iam::167856709162:role/lambda-kinesis-execution-role"
   runtime: "python2.7"
