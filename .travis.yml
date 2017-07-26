@@ -1,3 +1,10 @@
 language: python
 script:
   - python -m pytest -v
+deploy:
+  provider: lambda
+  function_name: "lambda-ci/cd/test"
+  region: "ap-southeast-2"
+  role: "arn:aws:iam::167856709162:role/lambda-kinesis-execution-role"
+  runtime: "Python 3.6"
+  handler_name: "cicd"
